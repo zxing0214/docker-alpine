@@ -1,5 +1,8 @@
-FROM alpine:3.9
+FROM alpine
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.cloud.tencent.com/g' /etc/apk/repositories ;\
-    apk add --no-cache lua5.3 lua-filesystem lua-lyaml lua-http
-
+    apk update&&apk upgrade ;\
+    apk --no-cache add tzdata ;\
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime ;\
+    echo "Asia/Shanghai" > /etc/timezone ;\
+    rm -rf /var/cache/apk/*
