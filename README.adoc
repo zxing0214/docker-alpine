@@ -1,7 +1,7 @@
 = docker-alpine
 
 :ao: alpinelinux.org
-:hubp: _/alpine
+:hubp: zxing/alpine
 :hub: https://hub.docker.com/r/{hubp}/
 
 image:https://img.shields.io/docker/stars/{hubp}.svg[link={hub}]
